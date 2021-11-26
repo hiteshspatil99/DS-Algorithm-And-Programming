@@ -23,6 +23,10 @@ namespace DS_Algorithm
                         assending.Ordered();
                         break;
                     case 3:
+                        BalanceParanthesis paranthesis = new BalanceParanthesis();
+                        paranthesis.Balance();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                         
