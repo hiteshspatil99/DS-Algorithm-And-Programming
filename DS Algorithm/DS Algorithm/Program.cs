@@ -19,6 +19,10 @@ namespace DS_Algorithm
                         list.UnOrdered();
                         break;
                     case 2:
+                        OrderedList assending = new OrderedList();
+                        assending.Ordered();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                         
