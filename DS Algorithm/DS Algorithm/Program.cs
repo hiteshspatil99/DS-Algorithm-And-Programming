@@ -27,6 +27,8 @@ namespace DS_Algorithm
                         paranthesis.Balance();
                         break;
                     case 4:
+                        BankingCashCounter counter = new BankingCashCounter();
+                        counter.CashCounter();
                         flag = false;
                         break;
                         
