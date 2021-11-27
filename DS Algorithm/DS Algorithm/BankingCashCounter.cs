@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DS_Algorithm.Utility;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace DS_Algorithm
 {
     class BankingCashCounter
     {
-        Utility.QueueList<string> List = new Utility.QueueList<string>();
+        QueueOperation<string> List = new QueueOperation<string>();
         public void CashCounter()
         {
             int amount = 17000;
@@ -41,7 +42,7 @@ namespace DS_Algorithm
                         amount = amount + deposit;
 
                         Console.WriteLine("Total Balance = " + amount);
-                        List.Dequeue();
+                        List.DeQueue();
                         break;
 
                     case 2:
@@ -53,7 +54,7 @@ namespace DS_Algorithm
                             amount = amount - withdrawal;
 
                             Console.WriteLine("Total Balance = " + amount);
-                            List.Dequeue();
+                            List.DeQueue();
                         }
                         else
                         {

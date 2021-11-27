@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DS_Algorithm.Utility;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -9,29 +10,29 @@ namespace DS_Algorithm
     {
         public void Balance()
         {
-            Utility.QueueList<string> QL = new Utility.QueueList<string>();
+            
             string NumfilePath = File.ReadAllText(@"D:\DS AlgorithmProgram\DS-Algorithm-And-Programming\DS Algorithm\DS Algorithm\Utility\Arithmatic.txt");
 
             string[] words = NumfilePath.Split(",");
-
+            StackQueueList<string> QL = new StackQueueList<string>();
             foreach (var result in words)
             {
-               // if (result == "(")
+              if (result == "(")
                 {
-                 //   QL.Push("(");
+                   QL.Push("(");
                 }
 
-               // else
+               else
                 {
-                  //  QL.Pop(")");
+                   QL.Pop(")");
                 }
 
-                //if (QL.IsEmpty())
+                if (QL.IsEmpty())
                 {
                     Console.WriteLine(" Is Balanced Paranthesis");
                 }
 
-                //else
+                else
                 {
                     Console.WriteLine("Is Not a Balanced Paranthesis");
                 }
