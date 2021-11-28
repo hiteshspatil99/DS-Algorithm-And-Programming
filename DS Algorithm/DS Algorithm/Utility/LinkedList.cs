@@ -56,6 +56,20 @@ namespace DS_Algorithm.Utility
                 }
             }
         }
+
+        public string DequeuePalindromeChecker()
+        {
+            string reverseString = " ";
+            while (this.head != null)
+            {
+                if (this.head == null)
+                {
+                    Console.WriteLine("Queue is Empty");
+                }
+                reverseString = this.head.data + reverseString;
+                head = head.next;   
+            }
+            return reverseString;
     }
 }
     
